@@ -1,0 +1,4 @@
+name: Onlinetablist
+version: 1.0-SNAPSHOT
+main: com.mineaurion.onlinetablist.OnlinetablistSpigot
+depend: [ProtocolLib]

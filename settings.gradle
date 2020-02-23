@@ -1,0 +1,3 @@
+rootProject.name = 'onlinetablist'
+
+include 'spigot'

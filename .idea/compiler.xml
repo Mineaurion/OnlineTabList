@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="onlinetablist.onlinetablist-common.main" target="1.8" />
+      <module name="onlinetablist.onlinetablist-common.test" target="1.8" />
+      <module name="onlinetablist.onlinetablist-spigot.main" target="1.8" />
+      <module name="onlinetablist.onlinetablist-spigot.test" target="1.8" />
+      <module name="onlinetablist.onlinetablist-sponge.main" target="1.8" />
+      <module name="onlinetablist.onlinetablist-sponge.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
