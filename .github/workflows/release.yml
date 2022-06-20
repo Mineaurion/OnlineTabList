@@ -18,7 +18,7 @@ jobs:
         run: |
           sed -i "s/pluginVersion=SNAPSHOT/pluginVersion=${REF:11}/" gradle.properties
       - name: Create release with Gradle
-        run: ./gradlew clean build -x test
+        run: ./gradlew clean build
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
