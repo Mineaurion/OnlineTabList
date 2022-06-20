@@ -1,4 +1,4 @@
 name: Onlinetablist
-version: SNAPSHOT
+version: ${version}
 main: com.mineaurion.onlinetablist.OnlinetablistSpigot
 depend: [ProtocolLib]
