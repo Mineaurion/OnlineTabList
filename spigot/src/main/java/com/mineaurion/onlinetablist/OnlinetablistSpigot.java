@@ -20,11 +20,9 @@ import java.net.URLConnection;
 
 public class OnlinetablistSpigot extends JavaPlugin {
 
-    private ProtocolManager protocolManager;
-
     @Override
     public void onEnable() {
-        protocolManager = ProtocolLibrary.getProtocolManager();
+        ProtocolManager protocolManager = ProtocolLibrary.getProtocolManager();
         protocolManager.addPacketListener(
             new PacketAdapter(this, ListenerPriority.HIGHEST ,PacketType.Status.Server.SERVER_INFO) {
                 @Override
@@ -44,7 +42,7 @@ public class OnlinetablistSpigot extends JavaPlugin {
 
     private int getOnlinePlayers() throws IOException {
         StringBuilder jsonS = new StringBuilder();
-        URL url = new URL("https://api.mineaurion.com/v1/website/home");
+        URL url = new URL("https://api.mineaurion.com/query/online-players");
         URLConnection conn = url.openConnection();
         conn.connect();
         BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -55,9 +53,9 @@ public class OnlinetablistSpigot extends JavaPlugin {
         }
         Gson gson = new Gson();
         JsonObject jsonObject= gson.fromJson(jsonS.toString(), JsonObject.class);
-        int joueurs = jsonObject.get("joueurs").getAsInt();
+        int players = jsonObject.get("onlinePlayers").getAsInt();
         in.close();
-        return joueurs;
+        return players;
     }
 
     @Override

@@ -25,4 +25,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           files: |
-            spigot/build/libs/*.jar
+            spigot/build/libs/*-all.jar
